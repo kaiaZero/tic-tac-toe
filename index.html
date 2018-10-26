@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+ <head>
+   <meta charset="utf-8">
+   <title>井字棋</title>
+   <link rel="stylesheet" href="css/tictactoe.css">
+ </head>
+ <body id="body">
+   <h1>
+     TicTacToe
+   </h1>
+   <div id="button1">
+     <button class="modebutton" onclick="onePlayer()"> 1 Player    </button>
+     <button class="modebutton" onclick="twoPlayer()"> 2 Player    </button>
+   </div>
+  <div id="button2">
+    <button id="restart">Restart</button>
+    <button id="Undo">Undo</button>
+  </div>
+  <div id="container">
+    <a href="javascript:;" class="tic" id="tic-0-0"></a>
+    <a href="javascript:;" class="tic" id="tic-0-1"></a>
+    <a href="javascript:;" class="tic" id="tic-0-2"></a>
+    <a href="javascript:;" class="tic" id="tic-1-0"></a>
+    <a href="javascript:;" class="tic" id="tic-1-1"></a>
+    <a href="javascript:;" class="tic" id="tic-1-2"></a>
+    <a href="javascript:;" class="tic" id="tic-2-0"></a>
+    <a href="javascript:;" class="tic" id="tic-2-1"></a>
+    <a href="javascript:;" class="tic" id="tic-2-2"></a>
+  </div>
+  <div id="back"></div>
+  <div id="choose">
+    <h2> Tic Tac Toe</h2><br>
+    <hr>
+    <br>
+    <p>Please choose a mode</p><br>
+  <div class="chooseMode">
+    <button id="onePlayer" onclick="chooseMode1()">1 Player</button>
+    <button id="twoPlayer" onclick="chooseMode2()">2 Player</button><br><br><br>
+  </div>
+  </div>
+  <script src='1.js'></script>
+</body>
+</html>

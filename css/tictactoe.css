@@ -1,0 +1,171 @@
+@font-face{
+  font-family: 'Itim';src:url('Itim.ttf');
+}
+
+*{
+  padding:0;
+  margin:0;
+  font-family:'Itim',cursive;
+}
+
+html,body{
+  height:96%;
+  width:100%;
+  background-color: #cb4042;
+  background-position:fixed;
+}
+h1{
+  color:#fff;
+  text-align: center;
+  margin-top:2%;
+  font-size: 2em;
+}
+
+
+#choose{
+  position:absolute;
+  top:5%;
+  left:0;
+  right:0;
+  margin:auto;
+  z-index: 21;
+  width:700px;
+  padding-top: 20px;
+  text-align: center;
+  color:#fff;
+  background-color: #db4d6d;
+  outline:none;
+  border-radius: 10px;
+
+}
+#choose p{
+  font-size: 1.5em;
+}
+
+.chooseMode button{
+  width:90px;
+  height:30px;
+  text-align: center;
+  font-size: 1em;
+  cursor:pointer;
+  border-radius: 6px;
+  border:none;
+}
+#button1{
+  position:absolute;
+  right:-30px;
+  top:200px;
+}
+
+.modebutton{
+display: block;
+width:130px;
+height: 90px;
+padding:20px 40px 40px 40px;
+margin:20px;
+margin-bottom: 40px;
+text-align: center;
+font-size: 22px;
+font-weight:200;
+border-radius: 6px;
+cursor:pointer;
+border:none;
+transition: transform .3s;
+}
+
+.modebutton:hover{
+  transform: translateX(-9px);
+}
+
+#restart:hover{
+  background-color: #cb4042;
+  color:white;
+}
+
+#Undo:hover{
+  background-color: #cb4042;
+  color:white;
+}
+
+#button2{
+  position:absolute;
+  top:200px;
+  left:50px;
+}
+
+#restart{
+  display: block;
+  width:150px;
+  height: 100px;
+  padding:35px 40px 40px 35px;
+  margin:20px;
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 25px;
+  font-weight:200;
+  border-radius: 6px;
+  cursor:pointer;
+  border:none;
+  }
+
+  #Undo{
+    display: block;
+    width:150px;
+    height: 100px;
+    padding:35px 40px 40px 40px;
+    margin:20px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 25px;
+    font-weight:200;
+    border-radius: 6px;
+    cursor:pointer;
+    border:none;
+  }
+
+
+#container{
+  margin-top: 2%;
+  height:454px;
+  width:454px;
+  margin:auto;
+  background-color: #fff;
+  z-index: 2;
+}
+.tic{
+  display:inline-block;
+  float:left;
+  height:150px;
+  width:150px;
+  color:#000;
+  cursor:pointer;
+  border:1px solid #cb4042;
+  position:relative;
+  text-align: center;
+  text-decoration: none;
+  font-size: 140px;
+  line-height: 150px;
+}
+
+#para{
+  position:absolute;
+  top:15%;
+  right:0;
+  left:0;
+  margin:auto;
+  text-align: center;
+  color:#db4d6d;
+  font-size: 200px;
+  font-weight: 600;
+  z-index: 30;
+}
+
+#back{
+  position:fixed;
+  opacity: 0.7;
+  top:0;
+  width:100%;
+  height:100%;
+  background-color: #000;
+  z-index: 10;
+}
