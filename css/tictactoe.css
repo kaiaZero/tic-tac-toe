@@ -126,14 +126,15 @@ transition: transform .3s;
 
 #container{
   margin-top: 2%;
-  height:454px;
-  width:454px;
+  height:459px;
+  width:459px;
   margin:auto;
-  background-color: #fff;
+  background-color: #cb4042;
   z-index: 2;
 }
 .tic{
   display:inline-block;
+  background-color: #fff;
   float:left;
   height:150px;
   width:150px;
@@ -143,7 +144,8 @@ transition: transform .3s;
   position:relative;
   text-align: center;
   text-decoration: none;
-  font-size: 140px;
+  font-size:
+   140px;
   line-height: 150px;
 }
 
