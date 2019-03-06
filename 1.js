@@ -33,7 +33,7 @@ function chooseMode1(){
   var back= document.getElementById("back");
   body.removeChild(choose); //关闭选择界面
   body.removeChild(back);
-}
+} 
 
 function chooseMode2(){
   twoPlayer();
