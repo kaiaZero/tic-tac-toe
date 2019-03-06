@@ -31,7 +31,7 @@ function chooseMode1(){
   var choose = document.getElementById("choose");
   var body= document.getElementsByTagName("body")[0];
   var back= document.getElementById("back");
-  body.removeChild(choose);
+  body.removeChild(choose); //关闭选择界面
   body.removeChild(back);
 }
 
@@ -64,7 +64,7 @@ function newGame(){
   }
 
 
-
+//检测输赢
   function checkWin(x,y){
     var sumx=0;
     var sumy=0;
@@ -92,6 +92,7 @@ function newGame(){
       return false;
     }
 }
+//检测平局情况
 function checkEven(){
   var even=1;
   for(var i=0;i<3;i++){
@@ -107,7 +108,7 @@ function checkEven(){
   }
     return even;
 }
-
+//显示胜负结果
 function gameOver(x,y){
   if(checkWin(x,y)){
     if(flag==2){
@@ -138,6 +139,7 @@ function gameOver(x,y){
       }
     }
     var resultDiv=document.getElementById("result");
+    //显示结果后自动重新开始
     setTimeout(
       function(){
         body.removeChild(resultDiv);
@@ -158,7 +160,7 @@ function showResult(){
   var body=document.getElementById("body");
   body.appendChild(resultDiv);
 };
-
+//重新开始
 linkRestart.setAttribute("onclick","restart()");
 var restart= function(){
   if(modeFlag==1){
@@ -168,7 +170,9 @@ var restart= function(){
     twoPlayer();
   }
 }
-
+//单人模式下，AI部分
+//走完两回合情况下检查是否能三连，返回能三连的位置
+//kind：1检查玩家 -1检查AI
 var checkTwo = function(kind,group){
   var allPossible = [[0,1,2],[0,3,6],[0,4,8],[3,4,5],[6,7,8],[1,4,7],[2,5,8],[2,4,6]];
   var place=[];//记录返回位置；
@@ -197,6 +201,7 @@ var checkTwo = function(kind,group){
 
 var computer = function(){
   var step=0;
+  //检查是第几步
   for(i in group){
       if(group[i]==1){
         ++step;
@@ -296,7 +301,7 @@ var computer = function(){
     }
   }
 }
-
+//单人模式下悔棋
 var undoOne = function(i,j){
 
   show[i][j].text="";
@@ -306,7 +311,7 @@ var undoOne = function(i,j){
   group[row*3+col]=0;
   show[row][col].text = "";
 }
-
+//双人模式下悔棋
 var undoTwo = function(i,j){
   if(flag==1){
   show[i][j].text="";
